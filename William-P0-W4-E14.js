@@ -20,7 +20,7 @@ function naikAngkot(arrPenumpang) {
       var akhir = j
     }
     }
-    object[namaInput].harga = 2000 * (akhir - awal)
+    object[namaInput].harga = Math.abs(2000 * (akhir - awal))
   }
   var values = Object.values(object)
   return values
@@ -29,7 +29,7 @@ function naikAngkot(arrPenumpang) {
 
 
 //TEST CASE
-console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
+console.log(naikAngkot([['Dimitri', 'B', 'D'], ['Icha', 'A', 'B']]));
 // [ { penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 },
 //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
 
